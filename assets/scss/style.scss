@@ -72,6 +72,23 @@ input.addTaskButton {
 
 }
 
+.alertBar {
+  position: absolute;
+  top: 0;
+  background: red;
+  padding: 10px 20px;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  text-align: center;
+
+  h5 {
+    margin: 0;
+  }
+}
+
 
 
 

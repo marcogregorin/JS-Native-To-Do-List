@@ -24,17 +24,37 @@ function createListItem(inputValue) {
   return newlistItem;
 }
 
+// Validation
+function validateInput() {
+  // Create alert bar
+  const alertBar = document.createElement('div');
+  alertBar.className = 'alertBar'
+  alertBar.innerHTML = '<h5>Please insert some value</h5>';
+  document.body.appendChild(alertBar);
+
+  // Remove alert after few seconds
+  setTimeout(function removeAlert() {
+    document.body.removeChild(alertBar)
+  }, 3000);
+}
+
 // ** Add New Task Item
 addTaskButton.addEventListener('click', (event) => {
   // Prevent broswer from refreshing when form is submitted
   event.preventDefault();
   const inputValue = addTaskInput.value;
   // Run Function that creates the LI item
-  const li = createListItem(inputValue);
+  if (inputValue === '') {
+    validateInput();
+  } else {
+    const li = createListItem(inputValue);
+    // Display li into #tasklist ul
+    taskList.append(li);
+  }
   // Clean input value in form after item is added
   addTaskInput.value = "";
-  // Display li into #tasklist ul
-  taskList.append(li);
+
+
 });
 
 // ** Remove LI item when task is completed

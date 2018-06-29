@@ -62,6 +62,22 @@ input.addTaskButton:hover {
   -webkit-transition: 0.3s;
 }
 
+.alertBar {
+  position: absolute;
+  top: 0;
+  background: red;
+  padding: 10px 20px;
+  color: #fff;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  text-align: center;
+}
+.alertBar h5 {
+  margin: 0;
+}
+
 /* Content & Lists */
 .content {
   margin-top: 40px;
