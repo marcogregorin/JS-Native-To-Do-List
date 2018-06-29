@@ -1,3 +1,10 @@
+// Media Query
+$mobile: "(max-width: 414px)";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f6f6f6;
   margin: 0;
@@ -27,11 +34,19 @@ form.addTaskForm {
   margin-top: 40px;
 
   input.addTaskInput {
-    height: 30px;
+    height: 50px;
     width: 350px;
     border: none;
     font-size: 20px;
     padding: 10px;
+
+    @media #{$mobile} {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: 0;
+    }
 
     &::placeholder {
       color: #d6d6d6;
@@ -40,10 +55,10 @@ form.addTaskForm {
       font-style: italic;
     }
 
-  }
+    &.inputError {
+      border: 1px solid #ff0000;
+    }
 
-  &:focus {
-    outline: 0;
   }
 
 }
@@ -60,6 +75,12 @@ input.addTaskButton {
   border: none;
   cursor: pointer;
 
+  @media #{$mobile} {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
   &:focus {
     outline: 0;
   }
@@ -72,17 +93,10 @@ input.addTaskButton {
 
 }
 
-.alertBar {
-  position: absolute;
-  top: 0;
-  background: red;
-  padding: 10px 20px;
-  color: #fff;
-  width: 100%;
-  left: 0;
-  right: 0;
-  z-index: 999999;
-  text-align: center;
+.alertMessage {
+  margin-top: 10px;
+  display: block;
+  color: #ff0000;
 
   h5 {
     margin: 0;

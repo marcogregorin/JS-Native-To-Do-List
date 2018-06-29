@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f6f6f6;
   margin: 0;
@@ -26,11 +30,19 @@ form.addTaskForm {
   margin-top: 40px;
 }
 form.addTaskForm input.addTaskInput {
-  height: 30px;
+  height: 50px;
   width: 350px;
   border: none;
   font-size: 20px;
   padding: 10px;
+}
+@media (max-width: 414px) {
+  form.addTaskForm input.addTaskInput {
+    width: 100%;
+  }
+}
+form.addTaskForm input.addTaskInput:focus {
+  outline: 0;
 }
 form.addTaskForm input.addTaskInput::placeholder {
   color: #d6d6d6;
@@ -38,8 +50,8 @@ form.addTaskForm input.addTaskInput::placeholder {
   font-weight: 300;
   font-style: italic;
 }
-form.addTaskForm:focus {
-  outline: 0;
+form.addTaskForm input.addTaskInput.inputError {
+  border: 1px solid #ff0000;
 }
 
 input.addTaskButton {
@@ -53,6 +65,13 @@ input.addTaskButton {
   border: none;
   cursor: pointer;
 }
+@media (max-width: 414px) {
+  input.addTaskButton {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
 input.addTaskButton:focus {
   outline: 0;
 }
@@ -62,19 +81,12 @@ input.addTaskButton:hover {
   -webkit-transition: 0.3s;
 }
 
-.alertBar {
-  position: absolute;
-  top: 0;
-  background: red;
-  padding: 10px 20px;
-  color: #fff;
-  width: 100%;
-  left: 0;
-  right: 0;
-  z-index: 999999;
-  text-align: center;
+.alertMessage {
+  margin-top: 10px;
+  display: block;
+  color: #ff0000;
 }
-.alertBar h5 {
+.alertMessage h5 {
   margin: 0;
 }
 

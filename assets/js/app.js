@@ -2,6 +2,7 @@
 // by Marco Gregorin
 
 // ** Define global variables
+const addTaskForm = document.querySelector('#addTaskForm');
 const addTaskButton = document.querySelector('#addTaskButton');
 const addTaskInput = document.querySelector('#addTaskInput');
 const taskList = document.querySelector('#tasksList');
@@ -24,18 +25,22 @@ function createListItem(inputValue) {
   return newlistItem;
 }
 
-// Validation
+// ** Front-End Validation
 function validateInput() {
-  // Create alert bar
-  const alertBar = document.createElement('div');
-  alertBar.className = 'alertBar'
-  alertBar.innerHTML = '<h5>Please insert some value</h5>';
-  document.body.appendChild(alertBar);
+  const messageIsPresent = addTaskForm.querySelector('.alertMessage');
+  const alertMessage = document.createElement('span');
+  if (!messageIsPresent) {
+    alertMessage.className = 'alertMessage';
+    addTaskInput.classList.add('inputError');
+    alertMessage.textContent = 'Please insert some value';
+    addTaskForm.appendChild(alertMessage);
+  }
 
-  // Remove alert after few seconds
-  setTimeout(function removeAlert() {
-    document.body.removeChild(alertBar)
-  }, 3000);
+//   // Remove alert after few seconds
+//   setTimeout(function removeAlert() {
+//     addTaskForm.removeChild(alertMessage);
+//     addTaskInput.classList.remove('inputError')
+//   }, 5000);
 }
 
 // ** Add New Task Item
