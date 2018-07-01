@@ -7,6 +7,7 @@ const addTaskButton = document.querySelector('#addTaskButton');
 const addTaskInput = document.querySelector('#addTaskInput');
 const taskList = document.querySelector('#tasksList');
 const taskListItem = document.querySelector('#taskList li');
+const alertMessage = document.createElement('span');
 
 
 // ** Function that creates LI item
@@ -28,7 +29,6 @@ function createListItem(inputValue) {
 // ** Front-End Validation
 function validateInput() {
   const messageIsPresent = addTaskForm.querySelector('.alertMessage');
-  const alertMessage = document.createElement('span');
   if (!messageIsPresent) {
     alertMessage.className = 'alertMessage';
     addTaskInput.classList.add('inputError');
@@ -36,17 +36,15 @@ function validateInput() {
     addTaskForm.appendChild(alertMessage);
   }
 
-//   // Remove alert after few seconds
-//   setTimeout(function removeAlert() {
-//     addTaskForm.removeChild(alertMessage);
-//     addTaskInput.classList.remove('inputError')
-//   }, 5000);
-}
-
 // ** Add New Task Item
 addTaskButton.addEventListener('click', (event) => {
   // Prevent broswer from refreshing when form is submitted
   event.preventDefault();
+  // Remove validation label if is messgae is present
+  if (addTaskForm.appendChild(alertMessage)) {
+    addTaskForm.removeChild(alertMessage);
+    addTaskInput.classList.remove('inputError');
+  };
   const inputValue = addTaskInput.value;
   // Run Function that creates the LI item
   if (inputValue === '') {
