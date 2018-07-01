@@ -36,6 +36,8 @@ function validateInput() {
     addTaskForm.appendChild(alertMessage);
   }
 
+}
+
 // ** Add New Task Item
 addTaskButton.addEventListener('click', (event) => {
   // Prevent broswer from refreshing when form is submitted
