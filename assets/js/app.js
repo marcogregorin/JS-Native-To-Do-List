@@ -13,14 +13,16 @@ const alertMessage = document.createElement('span');
 // ** Function that creates LI item
 function createListItem(inputValue) {
   // Create li item
-  let newlistItem = document.createElement('li');
+  const newlistItem = document.createElement('li');
+  const taskText = document.createElement('span');
   // Get input value and add it to the li
-  newlistItem.innerHTML = inputValue;
+  taskText.innerHTML = inputValue;
   // Create a complete task icon
   let newListCompleteIcon = document.createElement('img');
   newListCompleteIcon.src = "assets/img/checked.svg";
   newListCompleteIcon.className = 'task-icon';
   // Add checkbox to the li
+  newlistItem.prepend(taskText);
   newlistItem.prepend(newListCompleteIcon);
   // Return list item to the handler
   return newlistItem;
@@ -62,8 +64,8 @@ addTaskButton.addEventListener('click', (event) => {
 
 });
 
-// ** Remove LI item when task is completed
-document.addEventListener('click', (event) => {
+// ** Remove Task when is completed
+taskList.addEventListener('click', (event) => {
   let clickedItem = event.target;
   if (clickedItem.tagName == 'IMG' & clickedItem.classList.contains("task-icon")) {
     let li = clickedItem.parentElement;

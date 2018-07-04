@@ -10,5 +10,6 @@ Roadmap:
 
 What has been used:
 - HTML5
-- SCSS
-- NPM
+- scss
+- npm
+- node
