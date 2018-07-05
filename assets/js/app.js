@@ -1,16 +1,16 @@
 // **  TO DO LIST - built on native JS **
 // by Marco Gregorin
 
-// ** Define global variables
+
+// **** DEFINE GLOBAL VARIABLES **** //
 const addTaskForm = document.querySelector('#addTaskForm');
 const addTaskButton = document.querySelector('#addTaskButton');
 const addTaskInput = document.querySelector('#addTaskInput');
 const taskList = document.querySelector('#tasksList');
-const taskListItem = document.querySelector('#taskList li');
 const alertMessage = document.createElement('span');
 
 
-// ** Function that creates LI item
+// **** FUNCTION THAT CREATES LI **** //
 function createListItem(inputValue) {
   // Create li item
   const newlistItem = document.createElement('li');
@@ -28,7 +28,8 @@ function createListItem(inputValue) {
   return newlistItem;
 }
 
-// ** Front-End Validation
+
+// **** FRONT-END VALIDATION **** //
 function validateInput() {
   const messageIsPresent = addTaskForm.querySelector('.alertMessage');
   if (!messageIsPresent) {
@@ -37,10 +38,10 @@ function validateInput() {
     alertMessage.textContent = 'Please insert some value';
     addTaskForm.appendChild(alertMessage);
   }
-
 }
 
-// ** Add New Task Item
+
+// **** ADD NEW TASK ITEM **** //
 addTaskButton.addEventListener('click', (event) => {
   // Prevent broswer from refreshing when form is submitted
   event.preventDefault();
@@ -60,11 +61,9 @@ addTaskButton.addEventListener('click', (event) => {
   }
   // Clean input value in form after item is added
   addTaskInput.value = "";
-
-
 });
 
-// ** Remove Task when is completed
+// **** REMOVE TASK WHEN IS COMPLETED  **** //
 taskList.addEventListener('click', (event) => {
   let clickedItem = event.target;
   if (clickedItem.tagName == 'IMG' & clickedItem.classList.contains("task-icon")) {
@@ -73,3 +72,27 @@ taskList.addEventListener('click', (event) => {
     ul.removeChild(li);
   }
 });
+
+
+// **** EDIT TASK **** //
+// taskList.addEventListener('click', (event) => {
+//   let clickedTask = event.target;
+//   let clickedTaskContent = clickedTask.textContent;
+//   let clickedTaskLi = clickedTask.parentElement;
+//   let InputEdit = document.createElement('input');
+//   InputEdit.type = 'text';
+//   InputEdit.className = 'edit-task';
+//   let clickedTaskSpan = event.target;
+//   if(clickedTask.tagName == 'SPAN') {
+//     // Add text input as value
+//     InputEdit.setAttribute('value', clickedTaskContent);
+//     // Add input to the DOM
+//     clickedTaskLi.appendChild(InputEdit);
+//     // Remove text
+//     clickedTaskLi.removeChild(clickedTaskSpan);
+//     console.log('Editing value');
+//   }
+//   InputEdit.addEventListener('submit', () => {
+//     console.log('salvato');
+//   });
+// });
