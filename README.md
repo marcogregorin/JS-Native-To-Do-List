@@ -1,15 +1,9 @@
 # JS-Native-To-Do-List
-Just an easy To Do List built with native JavaScript - it's just a test. Nothing here is meant to be serious ;)
+Just an easy To Do List built with native JavaScript. I needed to get my hands back on pure Vanilla JavaScript. No jQuery or other libraries. Just plain JS.
 
-Roadmap:
-- [x] Create task Item
-- [x] Check Front-End Validation
-- [ ] Edit task
-- [ ] Create Back-End with Node.js
-- [ ] Back-End Validation
+This is just a test: nothing is meant to be serious ;)
 
-What has been used:
+Techs used:
 - HTML5
 - scss
 - npm
-- node
