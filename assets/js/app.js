@@ -1,5 +1,6 @@
 // **  TO DO LIST - built on native JS **
 // by Marco Gregorin
+// v 1.0.0
 
 
 // **** DEFINE GLOBAL VARIABLES **** //
@@ -72,27 +73,3 @@ taskList.addEventListener('click', (event) => {
     ul.removeChild(li);
   }
 });
-
-
-// **** EDIT TASK **** //
-// taskList.addEventListener('click', (event) => {
-//   let clickedTask = event.target;
-//   let clickedTaskContent = clickedTask.textContent;
-//   let clickedTaskLi = clickedTask.parentElement;
-//   let InputEdit = document.createElement('input');
-//   InputEdit.type = 'text';
-//   InputEdit.className = 'edit-task';
-//   let clickedTaskSpan = event.target;
-//   if(clickedTask.tagName == 'SPAN') {
-//     // Add text input as value
-//     InputEdit.setAttribute('value', clickedTaskContent);
-//     // Add input to the DOM
-//     clickedTaskLi.appendChild(InputEdit);
-//     // Remove text
-//     clickedTaskLi.removeChild(clickedTaskSpan);
-//     console.log('Editing value');
-//   }
-//   InputEdit.addEventListener('submit', () => {
-//     console.log('salvato');
-//   });
-// });
