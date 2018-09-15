@@ -1,20 +1,10 @@
 // IMPORT BASE COMPONENTS
 @import "base/colors";
 @import "base/media-queries";
+@import "base/general";
 
 // IMPORT MODULES
 @import "modules/task-list";
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: $background;
-  margin: 0;
-  padding: 60px;
-  font-family: 'Raleway', sans-serif;
-}
 
 h2 {
   font-size: 36px;

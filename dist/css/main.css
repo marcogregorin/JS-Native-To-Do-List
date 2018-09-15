@@ -7,6 +7,35 @@ body {
   padding: 60px;
   font-family: 'Raleway', sans-serif; }
 
+/* Content & Lists */
+.content {
+  margin-top: 40px; }
+
+ul#tasksList {
+  margin: 0;
+  padding: 0; }
+
+ul#tasksList li {
+  list-style: none;
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 5px;
+  overflow: hidden;
+  padding: 5px; }
+  ul#tasksList li img.task-icon {
+    width: 25px;
+    opacity: 0.25;
+    cursor: pointer;
+    position: relative;
+    top: 6px;
+    margin-right: 10px; }
+    ul#tasksList li img.task-icon:hover {
+      opacity: 1;
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+
 h2 {
   font-size: 36px;
   margin: 0 0 10px 0; }
@@ -15,10 +44,6 @@ h6 {
   color: grey;
   font-size: 16px;
   margin: 0; }
-
-span.bacon {
-  font-size: 30px;
-  margin-left: 10px; }
 
 /* Inpunt & Buttons */
 form.addTaskForm {
@@ -85,32 +110,3 @@ input.addTaskButton {
   color: #ff0000; }
   .alertMessage h5 {
     margin: 0; }
-
-/* Content & Lists */
-.content {
-  margin-top: 40px; }
-
-ul#tasksList {
-  margin: 0;
-  padding: 0; }
-
-ul#tasksList li {
-  list-style: none;
-  font-size: 18px;
-  position: relative;
-  margin-bottom: 5px;
-  overflow: hidden;
-  padding: 5px; }
-  ul#tasksList li img.task-icon {
-    width: 25px;
-    opacity: 0.25;
-    cursor: pointer;
-    position: relative;
-    top: 6px;
-    margin-right: 10px; }
-    ul#tasksList li img.task-icon:hover {
-      opacity: 1;
-      transition: 0.3s;
-      -webkit-transition: 0.3s;
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1); }
