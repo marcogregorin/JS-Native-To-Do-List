@@ -1,0 +1,26 @@
+{
+  "name": "js-native-to-do-list",
+  "version": "1.0.0",
+  "description": "Just a simple JavaScript To Do List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcogregorin/JS-Native-To-Do-List.git"
+  },
+  "author": "Marco Gregorin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcogregorin/JS-Native-To-Do-List/issues"
+  },
+  "homepage": "https://github.com/marcogregorin/JS-Native-To-Do-List#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

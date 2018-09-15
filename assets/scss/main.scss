@@ -1,12 +1,15 @@
 // Media Query
 $mobile: "(max-width: 414px)";
 
+// COLORS
+$background: #f6f6f6;
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f6f6f6;
+  background-color: $background;
   margin: 0;
   padding: 60px;
   font-family: 'Raleway', sans-serif;
