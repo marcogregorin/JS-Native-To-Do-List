@@ -1,8 +1,9 @@
-// Media Query
-$mobile: "(max-width: 414px)";
+// IMPORT BASE COMPONENTS
+@import "base/colors";
+@import "base/media-queries";
 
-// COLORS
-$background: #f6f6f6;
+// IMPORT MODULES
+@import "modules/task-list";
 
 * {
   box-sizing: border-box;
@@ -26,11 +27,6 @@ h6 {
   margin: 0;
 }
 
-span.bacon {
-  font-size: 30px;
-  margin-left: 10px;
-}
-
 /* Inpunt & Buttons */
 
 form.addTaskForm {
@@ -52,14 +48,14 @@ form.addTaskForm {
     }
 
     &::placeholder {
-      color: #d6d6d6;
+      color: $placeholder;
       font-size: 18px;
       font-weight: 300;
       font-style: italic;
     }
 
     &.inputError {
-      border: 1px solid #ff0000;
+      border: 1px solid $red;
     }
 
   }
@@ -71,7 +67,7 @@ input.addTaskButton {
   height: 50px;
   margin-left: 10px;
   font-size: 20px;
-  background-color: #ff0000;
+  background-color: $red;
   color: #fff;
   font-weight: 600;
   padding: 10px 20px;
@@ -89,7 +85,7 @@ input.addTaskButton {
   }
 
   &:hover {
-    background-color: #ea0000;
+    background-color: $red-hover;
     transition: 0.3s;
     -webkit-transition: 0.3s;
   }
@@ -99,54 +95,9 @@ input.addTaskButton {
 .alertMessage {
   margin-top: 10px;
   display: block;
-  color: #ff0000;
+  color: $red;
 
   h5 {
     margin: 0;
   }
-}
-
-
-
-
-/* Content & Lists */
-
-.content {
-  margin-top: 40px;
-}
-
-ul#tasksList {
-  margin: 0;
-  padding: 0;
-}
-
-ul#tasksList {
-
-  li {
-    list-style: none;
-    font-size: 18px;
-    position: relative;
-    margin-bottom: 5px;
-    overflow: hidden;
-    padding: 5px;
-
-    img.task-icon {
-      width: 25px;
-      opacity: 0.25;
-      cursor: pointer;
-      position: relative;
-      top: 6px;
-      margin-right: 10px;
-
-      &:hover {
-        opacity: 1;
-        transition: 0.3s;
-        -webkit-transition: 0.3s;
-        transform: scale(1.10);
-      }
-
-    }
-
-  }
-
 }
