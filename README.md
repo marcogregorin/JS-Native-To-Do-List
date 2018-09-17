@@ -12,4 +12,5 @@ Link: https://marcogregorin.github.io/JS-Native-To-Do-List/
 * HTML5
 * JavaScript ES6
 * SCSS
-* Gulp Task Runner
+* Gulp
+* Webpack
